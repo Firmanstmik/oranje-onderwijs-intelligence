@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import {useTranslations} from 'next-intl';
 
 const Footer = () => {
+  const t = useTranslations('footer');
   return (
     <footer className="border-t border-[rgba(0,0,0,0.06)] py-12 md:py-16 bg-[linear-gradient(180deg,#F8FAFC_0%,#EEF2FF_100%)]">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
@@ -17,17 +21,17 @@ const Footer = () => {
               />
             </div>
             <p className="text-[10px] md:text-[11px] text-[#64748B] font-bold uppercase tracking-[0.15em] opacity-70 ml-1">
-              Education Data Intelligence Platform
+              {t('tagline')}
             </p>
           </div>
           
           {/* CENTER MENU */}
           <div className="flex items-center gap-8 md:gap-12 text-[12px] md:text-[14px] text-[#475569] font-medium tracking-tight">
             {[
-              { label: 'Docs', href: '#' },
-              { label: 'Privacy', href: '#' },
-              { label: 'Terms', href: '#' },
-              { label: 'Contact', href: '#' }
+              { label: t('docs'), href: '#' },
+              { label: t('privacy'), href: '#' },
+              { label: t('terms'), href: '#' },
+              { label: t('contact'), href: '#' }
             ].map((item) => (
               <a 
                 key={item.label}
@@ -45,7 +49,7 @@ const Footer = () => {
           {/* RIGHT SIDE: COPYRIGHT */}
           <div className="flex items-center h-full">
             <p className="text-[10px] md:text-[12px] text-[#64748B] font-medium opacity-60 text-center md:text-right leading-relaxed">
-              © 2026 Oranje Onderwijs Intelligence.<br className="md:hidden" /> All rights reserved.
+              © 2026 Oranje Onderwijs Intelligence.<br className="md:hidden" /> {t('rights')}
             </p>
           </div>
         </div>

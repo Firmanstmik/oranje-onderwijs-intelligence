@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   /* config options here */
   outputFileTracingRoot: process.cwd(),
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin('./i18n.ts');
+
+export default withNextIntl(nextConfig);

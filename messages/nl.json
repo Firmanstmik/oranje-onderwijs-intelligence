@@ -1,0 +1,151 @@
+{
+  "navbar": {
+    "search": "Zoek programma's, instellingen of trefwoorden...",
+    "search_mobile": "Zoek programma's...",
+    "esc": "ESC",
+    "notifications": "Meldingen",
+    "toggle_search": "Zoeken tonen/verbergen",
+    "clear_search": "Zoeken wissen"
+  },
+  "hero": {
+    "live": "Live Intelligentie",
+    "title_main": "Nederlands Onderwijs",
+    "title_sub": "Data Intelligentie",
+    "description": "Programma-mapping op bedrijfsniveau en ecosysteemanalyse in het hele Nederlandse onderwijslandschap."
+  },
+  "data_quality": {
+    "system_live": "Systeem Live",
+    "sync": "Sync",
+    "poc_scope": "POC Scope: {count} Instellingen",
+    "poc_info": "Systeemarchitectuur is ontworpen voor volledige landelijke uitbreiding naar 100+ scholen.",
+    "close_info": "Info sluiten",
+    "badge_verified_data": "Geverifieerde data",
+    "badge_structured": "Gestructureerd",
+    "badge_multi_source": "Multi-bron",
+    "badge_deduplicated": "Gededupliceerd",
+    "nationwide_scalability": "Landelijke schaalbaarheid",
+    "scalability_text": "Momenteel indexeren we gevalideerde data van meerdere instellingen. De modulaire scrapingarchitectuur is gebouwd om op te schalen naar 100+ scholen.",
+    "system_status": "Systeemstatus",
+    "production_ready": "Productieklaar"
+  },
+  "stats": {
+    "institutions": "Instellingen",
+    "analyzed": "Geanalyseerd",
+    "sources": "Bronnen",
+    "confidence": "Betrouwbaarheid",
+    "coverage_title": "Data Dekking & Intelligentie",
+    "primary_portals": "Primaire Portalen",
+    "validated": "Gevalideerd"
+  },
+  "insights": {
+    "title": "Ecosysteem Inzichten",
+    "description": "Propriëtaire structurele analyse over taal, kwalificatieniveaus en institutionele dichtheid.",
+    "data_integrity_label": "Data Integriteit",
+    "data_integrity_text": "Grafieken worden gegenereerd op basis van realtime genormaliseerde data uit {count} gevalideerde bronnen.",
+    "framework": "Institutioneel Kader",
+    "edu_type": "Onderwijstype",
+    "leveling": "Academische Nivellering",
+    "level": "Kwalificatieniveau",
+    "mapping": "Ecosysteem Mapping",
+    "cluster": "Intelligentie Cluster",
+    "language": "Taal Diversiteit",
+    "lang_mix": "Taal Mix",
+    "indexed": "Geïndexeerde Programma's",
+    "units": "Eenheden"
+  },
+  "filters": {
+    "title": "PROGRAMMA INTELLIGENTIE",
+    "subtitle": "Interactieve catalogusmapping over Nederlandse academische instellingen.",
+    "search": "Zoek programma's...",
+    "results": "{count} programma's getoond",
+    "no_results": "Geen programma's gevonden die voldoen aan uw zoekopdracht.",
+    "all": "Alle",
+    "school": "School",
+    "level": "Niveau",
+    "type": "Type",
+    "city": "Stad"
+  },
+  "card": {
+    "view_details": "Bekijk details"
+  },
+  "dashboard": {
+    "core_value": "Kernwaarde",
+    "core_value_text": "Handmatig onderzoek automatiseren met gestructureerde institutionele intelligentie, ontworpen voor landelijke schaalbaarheid.",
+    "data_processing_pipeline": "Dataverwerkingspijplijn",
+    "institution_breakdown": "Instellingsverdeling",
+    "program_catalog": "Programmacatalogus",
+    "program_catalog_subtitle": "Geverifieerde academische en beroepsopleidingen",
+    "ecosystem_status": "Ecosysteemstatus",
+    "showing_programs": "{shown} van {total} programma's weergegeven",
+    "no_programs_title": "Geen programma's komen overeen met uw filters",
+    "no_programs_description": "Probeer uw dimensies aan te passen of een andere instelling te selecteren om beschikbare resultaten te zien.",
+    "clear_all_filters": "Wis alle filters",
+    "ecosystem_title_line1": "Ecosysteem",
+    "ecosystem_title_line2": "Inzichten"
+  },
+  "panel": {
+    "dialog_aria": "Programmadetails",
+    "close_details": "Detailspaneel sluiten",
+    "overview": "Overzicht",
+    "location": "Locatie",
+    "duration": "Duur",
+    "language": "Taal",
+    "structured_data": "Gestructureerde data",
+    "education_level": "Onderwijsniveau",
+    "degree_type": "Diplomatype",
+    "institution_name": "Naam instelling",
+    "data_quality": "Datakwaliteit",
+    "confidence_high": "Betrouwbaarheid: Hoog",
+    "source_type": "Brontype: Officiele website",
+    "view_official_source": "Bekijk officiele bron",
+    "related_programs": "Gerelateerde programma's",
+    "no_additional_programs": "Geen extra programma's van deze instelling in de huidige dataset."
+  },
+  "school_selector": {
+    "all_institutions": "Alle instellingen"
+  },
+  "pagination": {
+    "previous": "Vorige pagina",
+    "next": "Volgende pagina"
+  },
+  "filters_panel": {
+    "title": "Dimensiefilters",
+    "subtitle": "Verfijn academische mapping",
+    "education": "Onderwijs",
+    "degree": "Diploma",
+    "language": "Taal",
+    "reset": "Reset",
+    "option": {
+      "all_types": "Alle types",
+      "mbo": "MBO",
+      "hbo": "HBO",
+      "wo": "WO",
+      "all_levels": "Alle niveaus",
+      "bachelor": "Bachelor",
+      "master": "Master",
+      "any_language": "Elke taal",
+      "english": "Engels",
+      "dutch": "Nederlands"
+    }
+  },
+  "pipeline": {
+    "scraping": "Scrapen",
+    "multi_source": "Multi-bron",
+    "normalization": "Normalisatie",
+    "structured": "Gestructureerd",
+    "deduplication": "Deduplicatie",
+    "clean_id": "Schone ID",
+    "structuring": "Structureren",
+    "valid_type": "Geldig type",
+    "ready_for_api": "Klaar voor API",
+    "live_data": "Live data"
+  },
+  "footer": {
+    "tagline": "Onderwijs Data Intelligentie Platform",
+    "docs": "Docs",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "contact": "Contact",
+    "rights": "Alle rechten voorbehouden."
+  }
+}

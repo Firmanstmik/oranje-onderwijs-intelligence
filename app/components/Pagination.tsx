@@ -3,6 +3,7 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '../../lib/utils';
+import {useTranslations} from 'next-intl';
 
 interface PaginationProps {
   currentPage: number;
@@ -11,6 +12,7 @@ interface PaginationProps {
 }
 
 const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
+  const t = useTranslations('pagination');
   if (totalPages <= 1) return null;
 
   const renderPageNumbers = () => {
@@ -52,7 +54,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
             ? "opacity-30 cursor-not-allowed" 
             : "hover:border-[#C7D2FE] hover:text-[#4F46E5] hover:bg-[linear-gradient(180deg,#FFFFFF,#EEF2FF)] hover:shadow-[0_10px_22px_rgba(79,70,229,0.12)] hover:-translate-x-0.5"
         )}
-        aria-label="Previous page"
+        aria-label={t('previous')}
       >
         <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
       </button>
@@ -71,7 +73,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
             ? "opacity-30 cursor-not-allowed" 
             : "hover:border-[#C7D2FE] hover:text-[#4F46E5] hover:bg-[linear-gradient(180deg,#FFFFFF,#EEF2FF)] hover:shadow-[0_10px_22px_rgba(79,70,229,0.12)] hover:translate-x-0.5"
         )}
-        aria-label="Next page"
+        aria-label={t('next')}
       >
         <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
       </button>

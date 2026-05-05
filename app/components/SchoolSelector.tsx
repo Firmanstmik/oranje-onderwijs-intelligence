@@ -2,6 +2,7 @@
 
 import { universities } from '../../data/programs';
 import { cn } from '../../lib/utils';
+import {useTranslations} from 'next-intl';
 
 interface SchoolSelectorProps {
   selected: string;
@@ -11,6 +12,7 @@ interface SchoolSelectorProps {
 }
 
 const SchoolSelector = ({ selected, onSelect, counts, totalCount }: SchoolSelectorProps) => {
+  const t = useTranslations('school_selector');
   const schools = universities;
 
   return (
@@ -26,7 +28,7 @@ const SchoolSelector = ({ selected, onSelect, counts, totalCount }: SchoolSelect
         )}
       >
         <div className="relative z-10 flex items-center justify-between">
-          <span className="tracking-tight">All Institutions</span>
+          <span className="tracking-tight">{t('all_institutions')}</span>
           <span className={cn(
             "px-2.5 py-1 rounded-full text-[11px] font-black tracking-tighter transition-all",
             selected === 'All Schools' ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-[#F1F5F9] text-[#64748B]"

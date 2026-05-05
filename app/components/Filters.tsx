@@ -3,11 +3,12 @@
 import React from 'react';
 import { ChevronDown, Filter } from 'lucide-react';
 import { cn } from '../../lib/utils';
+import {useTranslations} from 'next-intl';
 
 interface FilterButtonProps {
   label: string;
   value: string;
-  options: string[];
+  options: {value: string; label: string}[];
   onSelect: (val: string) => void;
 }
 
@@ -27,18 +28,18 @@ const FilterButton = ({ label, value, options, onSelect }: FilterButtonProps) =>
       <div className="absolute top-full left-0 mt-2 md:mt-3 w-56 md:w-64 bg-[linear-gradient(180deg,#FFFFFF,#F8FAFC)] border border-[#E2E8F0] rounded-xl md:rounded-2xl shadow-[0_24px_40px_rgba(15,23,42,0.14)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-50 py-2 md:py-3 overflow-hidden">
         {options.map((option) => (
           <button
-            key={option}
+            key={option.value}
             type="button"
-            onClick={() => onSelect(option)}
+            onClick={() => onSelect(option.value)}
             className={cn(
               "w-full text-left px-5 md:px-6 py-2.5 md:py-3 text-[12px] md:text-[13px] transition-all duration-300 flex items-center justify-between",
-              value === option 
+              value === option.label 
                 ? "text-[#F97316] font-black bg-[#FFF7ED]" 
                 : "text-[#475569] font-bold hover:bg-[#EEF2FF] hover:text-[#0B1220]"
             )}
           >
-            <span>{option}</span>
-            {value === option && <div className="w-1.5 h-1.5 rounded-full bg-[#F97316]" />}
+            <span>{option.label}</span>
+            {value === option.label && <div className="w-1.5 h-1.5 rounded-full bg-[#F97316]" />}
           </button>
         ))}
       </div>
@@ -57,9 +58,11 @@ interface FiltersProps {
 }
 
 const Filters = ({ type, setType, level, setLevel, language, setLanguage, onReset }: FiltersProps) => {
+  const t = useTranslations('filters_panel');
   const typeOptions = ['All Types', 'MBO', 'HBO', 'WO'];
   const levelOptions = ['All Levels', 'Bachelor', 'Master'];
   const languageOptions = ['Any Language', 'English', 'Dutch'];
+  const optionLabel = (option: string) => t(`option.${option.replace(/\s+/g, '_').toLowerCase()}`);
 
   return (
     <div className="relative z-20 py-8 md:py-12 border border-[#E2E8F0] bg-white rounded-[2.5rem] px-8 md:px-12 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group/filters">
@@ -71,30 +74,30 @@ const Filters = ({ type, setType, level, setLevel, language, setLanguage, onRese
             <Filter className="w-5 h-5 text-[#4F46E5]" />
           </div>
           <div>
-            <h3 className="text-sm font-black uppercase tracking-[0.2em] text-[#0B1220]">Dimension Filters</h3>
-            <p className="text-xs font-medium text-[#64748B] mt-0.5">Refine academic mapping</p>
+            <h3 className="text-sm font-black uppercase tracking-[0.2em] text-[#0B1220]">{t('title')}</h3>
+            <p className="text-xs font-medium text-[#64748B] mt-0.5">{t('subtitle')}</p>
           </div>
         </div>
         
         <div className="flex flex-wrap items-center gap-4 md:gap-6 flex-1 lg:justify-end">
           <FilterButton 
-            label="Education" 
-            value={type} 
-            options={typeOptions}
+            label={t('education')} 
+            value={optionLabel(type)} 
+            options={typeOptions.map((value) => ({value, label: optionLabel(value)}))}
             onSelect={setType}
           />
 
           <FilterButton 
-            label="Degree" 
-            value={level} 
-            options={levelOptions}
+            label={t('degree')} 
+            value={optionLabel(level)} 
+            options={levelOptions.map((value) => ({value, label: optionLabel(value)}))}
             onSelect={setLevel}
           />
           
           <FilterButton 
-            label="Language" 
-            value={language} 
-            options={languageOptions}
+            label={t('language')} 
+            value={optionLabel(language)} 
+            options={languageOptions.map((value) => ({value, label: optionLabel(value)}))}
             onSelect={setLanguage}
           />
 
@@ -106,7 +109,7 @@ const Filters = ({ type, setType, level, setLevel, language, setLanguage, onRese
             className="group flex items-center gap-3 px-5 py-3 rounded-xl bg-[#F8FAFC] text-[11px] font-black uppercase tracking-widest text-[#64748B] hover:text-[#EF4444] hover:bg-[#FEF2F2] transition-all border border-transparent hover:border-[#FECACA]"
           >
             <span className="w-5 h-5 rounded-lg bg-white border border-[#E2E8F0] group-hover:border-[#FECACA] flex items-center justify-center transition-all text-xs">×</span>
-            Reset
+            {t('reset')}
           </button>
         </div>
       </div>

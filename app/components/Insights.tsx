@@ -3,6 +3,7 @@
 import { useMemo } from 'react';
 import { cn } from '../../lib/utils';
 import { programs as allPrograms } from '../../data/programs';
+import {useTranslations} from 'next-intl';
 import { 
   BarChart, 
   Bar, 
@@ -24,7 +25,7 @@ import {
 const COLORS = ['#4F46E5', '#6366F1', '#7C3AED', '#F97316', '#10B981'];
 const COLOR_CLASSES = ['bg-[#4F46E5]', 'bg-[#6366F1]', 'bg-[#7C3AED]', 'bg-[#F97316]', 'bg-[#10B981]'];
 
-const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>) => {
+const CustomTooltip = ({ active, payload, label, unitLabel }: TooltipProps<number, string> & {unitLabel: string}) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-[#0B1220] border border-white/10 backdrop-blur-xl p-4 rounded-2xl shadow-2xl animate-in fade-in zoom-in duration-300">
@@ -32,7 +33,7 @@ const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>)
         <div className="flex items-center gap-3">
           <div className="w-2 h-2 rounded-full bg-[#F97316] shadow-[0_0_8px_rgba(249,115,22,0.6)]" />
           <p className="text-white text-lg font-black tracking-tight">
-            {payload[0].value} <span className="text-[10px] text-[#64748B] font-medium ml-1">Programs</span>
+            {payload[0].value} <span className="text-[10px] text-[#64748B] font-medium ml-1">{unitLabel}</span>
           </p>
         </div>
       </div>
@@ -42,6 +43,7 @@ const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>)
 };
 
 const Insights = () => {
+  const t = useTranslations('insights');
   const stats = useMemo(() => {
     const typeCounts: Record<string, number> = {};
     const levelCounts: Record<string, number> = {};
@@ -74,8 +76,8 @@ const Insights = () => {
         <div className="premium-card p-8 hover:border-[#4F46E5]/30 group transition-all duration-300 md:col-span-2">
           <div className="flex items-center justify-between mb-10">
             <div>
-              <h3 className="label-premium text-[10px] text-[#64748B]">Institutional Framework</h3>
-              <p className="text-xl font-bold text-[#0B1220] tracking-tight mt-1">Education Type</p>
+              <h3 className="label-premium text-[10px] text-[#64748B]">{t('framework')}</h3>
+              <p className="text-xl font-bold text-[#0B1220] tracking-tight mt-1">{t('edu_type')}</p>
             </div>
           </div>
           
@@ -98,7 +100,7 @@ const Insights = () => {
                   tick={{ fontSize: 11, fontWeight: 700, fill: '#475569' }}
                   width={80}
                 />
-                <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(79, 70, 229, 0.02)' }} />
+                <Tooltip content={<CustomTooltip unitLabel={t('units')} />} cursor={{ fill: 'rgba(79, 70, 229, 0.02)' }} />
                 <Bar 
                   dataKey="value" 
                   fill="url(#barGradient)" 
@@ -114,7 +116,7 @@ const Insights = () => {
         <div className="premium-card p-8 hover:border-[#F97316]/30 group transition-all duration-300">
           <div className="flex flex-col h-full">
             <div className="text-center mb-6">
-              <h3 className="label-premium text-[10px] text-[#64748B] tracking-[0.2em]">Ecosystem Mapping</h3>
+              <h3 className="label-premium text-[10px] text-[#64748B] tracking-[0.2em]">{t('mapping')}</h3>
             </div>
             
             <div className="flex-grow flex items-center justify-center min-h-[200px]">
@@ -123,7 +125,7 @@ const Insights = () => {
                   <PolarGrid stroke="#E2E8F0" />
                   <PolarAngleAxis dataKey="subject" tick={{ fill: '#64748B', fontSize: 10, fontWeight: 700 }} />
                   <Radar
-                    name="Education Type"
+                    name={t('edu_type')}
                     dataKey="A"
                     stroke="#F97316"
                     fill="#F97316"
@@ -134,7 +136,7 @@ const Insights = () => {
             </div>
             
             <div className="text-center mt-6">
-              <p className="text-[10px] font-bold text-[#94A3B8] uppercase tracking-[0.2em] opacity-60">Intelligence Cluster</p>
+              <p className="text-[10px] font-bold text-[#94A3B8] uppercase tracking-[0.2em] opacity-60">{t('cluster')}</p>
             </div>
           </div>
         </div>
@@ -143,8 +145,8 @@ const Insights = () => {
         <div className="premium-card p-8 hover:border-[#F97316]/30 group transition-all duration-300">
           <div className="flex items-center justify-between mb-10">
             <div>
-              <h3 className="label-premium text-[10px] text-[#64748B]">Academic Leveling</h3>
-              <p className="text-xl font-bold text-[#0B1220] tracking-tight mt-1">Qualification Level</p>
+              <h3 className="label-premium text-[10px] text-[#64748B]">{t('leveling')}</h3>
+              <p className="text-xl font-bold text-[#0B1220] tracking-tight mt-1">{t('level')}</p>
             </div>
           </div>
           
@@ -171,7 +173,7 @@ const Insights = () => {
                   tickLine={false} 
                   tick={{ fontSize: 11, fontWeight: 700, fill: '#475569' }}
                 />
-                <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(249, 115, 22, 0.02)' }} />
+                <Tooltip content={<CustomTooltip unitLabel={t('units')} />} cursor={{ fill: 'rgba(249, 115, 22, 0.02)' }} />
                 <Bar 
                   dataKey="value" 
                   fill="url(#levelGradient)" 
@@ -187,8 +189,8 @@ const Insights = () => {
         <div className="premium-card p-8 hover:border-[#4F46E5]/30 md:col-span-2 group transition-all duration-300">
           <div className="flex items-center justify-between mb-10">
             <div>
-              <h3 className="label-premium text-[10px] text-[#64748B]">Linguistic Diversity</h3>
-              <p className="text-xl font-bold text-[#0B1220] tracking-tight mt-1">Language Mix</p>
+              <h3 className="label-premium text-[10px] text-[#64748B]">{t('language')}</h3>
+              <p className="text-xl font-bold text-[#0B1220] tracking-tight mt-1">{t('lang_mix')}</p>
             </div>
           </div>
           
@@ -210,7 +212,7 @@ const Insights = () => {
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
-                  <Tooltip content={<CustomTooltip />} />
+                  <Tooltip content={<CustomTooltip unitLabel={t('units')} />} />
                 </PieChart>
               </ResponsiveContainer>
             </div>
@@ -222,7 +224,7 @@ const Insights = () => {
                     <span className="text-[10px] font-black uppercase tracking-widest text-[#64748B]">{item.name}</span>
                   </div>
                   <p className="text-2xl font-bold text-[#0B1220] tracking-tight mt-1">{item.value}</p>
-                  <p className="text-[10px] font-medium text-[#94A3B8]">Programs Indexed</p>
+                  <p className="text-[10px] font-medium text-[#94A3B8]">{t('indexed')}</p>
                 </div>
               ))}
             </div>

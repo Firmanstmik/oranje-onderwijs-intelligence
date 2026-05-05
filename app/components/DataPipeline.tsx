@@ -2,16 +2,17 @@
 
 import React from 'react';
 import { MousePointer2, GitBranch, Cpu, Database, Globe, ArrowRight } from 'lucide-react';
-
-const steps = [
-  { icon: MousePointer2, label: "Scraping", sub: "Multi-source" },
-  { icon: GitBranch, label: "Normalization", sub: "Structured" },
-  { icon: Cpu, label: "Deduplication", sub: "Clean ID" },
-  { icon: Database, label: "Structuring", sub: "Valid Type" },
-  { icon: Globe, label: "Ready for API", sub: "Live Data" }
-];
+import {useTranslations} from 'next-intl';
 
 const DataPipeline = () => {
+  const t = useTranslations('pipeline');
+  const steps = [
+    { icon: MousePointer2, label: t('scraping'), sub: t('multi_source') },
+    { icon: GitBranch, label: t('normalization'), sub: t('structured') },
+    { icon: Cpu, label: t('deduplication'), sub: t('clean_id') },
+    { icon: Database, label: t('structuring'), sub: t('valid_type') },
+    { icon: Globe, label: t('ready_for_api'), sub: t('live_data') }
+  ];
   return (
     <div className="premium-card p-6 md:p-12 mb-16 md:mb-24 hover:border-[#4F46E5]/25 bg-[linear-gradient(135deg,#FFFFFF_0%,#F8FAFC_60%,#EEF2FF_100%)] border border-[#E2E8F0] shadow-[0_24px_50px_rgba(15,23,42,0.08)] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-56 h-56 bg-[radial-gradient(circle,rgba(79,70,229,0.14)_0%,transparent_70%)] pointer-events-none" />

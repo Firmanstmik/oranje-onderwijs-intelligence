@@ -1,5 +1,8 @@
+'use client';
+
 import { Program } from '../../data/programs';
 import { MapPin, Clock, ArrowRight } from 'lucide-react';
+import {useTranslations} from 'next-intl';
 
 interface ProgramCardProps {
   program: Program;
@@ -7,6 +10,7 @@ interface ProgramCardProps {
 }
 
 const ProgramCard = ({ program, onViewDetails }: ProgramCardProps) => {
+  const t = useTranslations('card');
   return (
     <div className="group p-5 md:p-7 flex flex-col h-full cursor-pointer relative overflow-hidden bg-white border border-[rgba(15,23,42,0.07)] rounded-[12px] md:rounded-[14px] shadow-[0_4px_14px_rgba(15,23,42,0.04)] transition-all duration-[250ms] [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] transform-gpu hover:-translate-y-1 md:hover:-translate-y-1.5 hover:scale-[1.005] hover:border-[rgba(79,70,229,0.18)] hover:shadow-[0_18px_34px_rgba(15,23,42,0.09)]">
       {/* Subtle Gradient Hover */}
@@ -53,7 +57,7 @@ const ProgramCard = ({ program, onViewDetails }: ProgramCardProps) => {
           onClick={() => onViewDetails?.(program)}
           className="w-full py-3.5 md:py-[18px] bg-[#F8FAFC] border border-[rgba(15,23,42,0.12)] text-[#1E293B] rounded-[8px] md:rounded-[10px] text-[13px] md:text-[14px] font-bold flex items-center justify-center gap-3 opacity-95 group-hover:opacity-100 transition-all duration-[250ms] [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] group-hover:bg-[linear-gradient(135deg,#0F172A,#334155)] group-hover:text-white group-hover:border-[rgba(15,23,42,0.2)] group-hover:shadow-[0_10px_22px_rgba(15,23,42,0.2)]"
         >
-          View Details
+          {t('view_details')}
           <ArrowRight className="w-4 h-4 transition-transform duration-[250ms] group-hover:translate-x-1" />
         </button>
       </div>

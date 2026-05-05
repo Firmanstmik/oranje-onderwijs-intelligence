@@ -2,23 +2,28 @@
 
 import { useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
-import Navbar from '../components/Navbar';
-import DataQuality from '../components/DataQuality';
-import DataPipeline from '../components/DataPipeline';
-import SchoolSelector from '../components/SchoolSelector';
-import Filters from '../components/Filters';
-import ProgramGrid from '../components/ProgramGrid';
-import Pagination from '../components/Pagination';
-import Footer from '../components/Footer';
-import { programs as allPrograms, universities, Program } from '../../data/programs';
+import {useTranslations} from 'next-intl';
+import Navbar from '../../components/Navbar';
+import DataQuality from '../../components/DataQuality';
+import DataPipeline from '../../components/DataPipeline';
+import SchoolSelector from '../../components/SchoolSelector';
+import Filters from '../../components/Filters';
+import ProgramGrid from '../../components/ProgramGrid';
+import Pagination from '../../components/Pagination';
+import Footer from '../../components/Footer';
+import { programs as allPrograms, universities, Program } from '../../../data/programs';
 import { Filter, X, ExternalLink, MapPin, Clock, GraduationCap, Languages, ShieldCheck } from 'lucide-react';
 
-const Insights = dynamic(() => import('../components/Insights'), { 
+const Insights = dynamic(() => import('../../components/Insights'), { 
   ssr: false,
   loading: () => <div className="h-[400px] w-full bg-[#F8FAFC] rounded-3xl animate-pulse" />
 });
 
 export default function DashboardPage() {
+  const t = useTranslations('dashboard');
+  const tHero = useTranslations('hero');
+  const tInsights = useTranslations('insights');
+  const tPanel = useTranslations('panel');
   const [selectedSchool, setSelectedSchool] = useState('All Schools');
   const [selectedType, setSelectedType] = useState('All Types');
   const [selectedLevel, setSelectedLevel] = useState('All Levels');
@@ -117,22 +122,22 @@ export default function DashboardPage() {
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#4F46E5]/5 text-[#4F46E5] rounded-lg label-premium mb-6 md:mb-8 border border-[#4F46E5]/10 shadow-sm text-[10px] md:text-[12px]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#4F46E5] animate-pulse" />
-              Live Intelligence
+              {tHero('live')}
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#0B1220] mb-6 md:mb-10 max-w-5xl leading-[1.1] md:leading-[1.2]">
-              <span className="block text-[#0B1220]">Netherlands Education</span>
-              <span className="block bg-gradient-to-r from-[#0B1220] via-[#4F46E5] to-[#F97316] bg-clip-text text-transparent pb-2 md:pb-4 -mb-2 md:-mb-4">Data Intelligence</span>
+              <span className="block text-[#0B1220]">{tHero('title_main')}</span>
+              <span className="block bg-gradient-to-r from-[#0B1220] via-[#4F46E5] to-[#F97316] bg-clip-text text-transparent pb-2 md:pb-4 -mb-2 md:-mb-4">{tHero('title_sub')}</span>
             </h1>
 
             <div className="flex flex-col lg:flex-row lg:items-center gap-8 md:gap-16">
               <p className="text-lg md:text-xl lg:text-2xl text-[#334155] max-w-2xl leading-relaxed font-medium">
-                Enterprise-grade program mapping and ecosystem analytics across the Dutch educational landscape.
+                {tHero('description')}
               </p>
               <div className="flex-1 border-l border-[#E2E8F0] pl-6 md:pl-12 hidden md:block">
-                <p className="label-premium mb-2 md:mb-4 text-[#475569] text-[10px] md:text-[12px]">Core Value</p>
+                <p className="label-premium mb-2 md:mb-4 text-[#475569] text-[10px] md:text-[12px]">{t('core_value')}</p>
                 <p className="text-sm md:text-base text-[#475569] font-medium leading-relaxed max-w-md">
-                  Automating manual research with structured institutional intelligence, designed for nationwide scalability.
+                  {t('core_value_text')}
                 </p>
               </div>
             </div>
@@ -146,7 +151,7 @@ export default function DashboardPage() {
             totalPrograms={allPrograms.length} 
           />
           <h3 className="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] text-[#0B1220] mb-4 md:mb-6 mt-8 md:mt-12">
-            <span className="bg-gradient-to-r from-[#0B1220] via-[#4F46E5] to-[#F97316] bg-clip-text text-transparent">Data Processing Pipeline</span>
+            <span className="bg-gradient-to-r from-[#0B1220] via-[#4F46E5] to-[#F97316] bg-clip-text text-transparent">{t('data_processing_pipeline')}</span>
           </h3>
           <DataPipeline />
         </section>
@@ -154,7 +159,7 @@ export default function DashboardPage() {
         {/* Intelligence Controls */}
         <section className="space-y-8 md:space-y-10 mb-16 md:mb-20">
           <div>
-            <h3 className="label-premium mb-4 md:mb-6 text-[#0B1220] text-[10px] md:text-[12px]">Institution Breakdown</h3>
+            <h3 className="label-premium mb-4 md:mb-6 text-[#0B1220] text-[10px] md:text-[12px]">{t('institution_breakdown')}</h3>
             <SchoolSelector 
               selected={selectedSchool} 
               onSelect={(val) => { setSelectedSchool(val); setCurrentPage(1); }}
@@ -178,13 +183,13 @@ export default function DashboardPage() {
         <section id="program-catalog" className="mb-20 md:mb-32 scroll-mt-24">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 md:mb-12">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0B1220] tracking-tight mb-1 md:mb-2">Program Catalog</h2>
-              <p className="text-sm md:text-base text-[#475569] font-medium">Verified academic and vocational offerings</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0B1220] tracking-tight mb-1 md:mb-2">{t('program_catalog')}</h2>
+              <p className="text-sm md:text-base text-[#475569] font-medium">{t('program_catalog_subtitle')}</p>
             </div>
             <div className="sm:text-right">
-              <p className="label-premium mb-1 text-[9px] md:text-[11px]">Ecosystem Status</p>
+              <p className="label-premium mb-1 text-[9px] md:text-[11px]">{t('ecosystem_status')}</p>
               <p className="text-xs md:text-sm font-bold text-[#0B1220]">
-                Showing {displayedPrograms.length} of {filteredPrograms.length} programs
+                {t('showing_programs', {shown: displayedPrograms.length, total: filteredPrograms.length})}
               </p>
             </div>
           </div>
@@ -203,16 +208,16 @@ export default function DashboardPage() {
               <div className="w-16 h-16 bg-[#F8FAFC] rounded-full flex items-center justify-center mx-auto mb-6 border border-[#E2E8F0]">
                 <Filter className="w-6 h-6 text-[#475569]/30" />
               </div>
-              <h3 className="text-xl font-bold text-[#0B1220] mb-2">No programs match your filters</h3>
+              <h3 className="text-xl font-bold text-[#0B1220] mb-2">{t('no_programs_title')}</h3>
               <p className="text-[#475569] max-w-xs mx-auto mb-10 font-medium leading-relaxed text-[15px]">
-                Try adjusting your dimensions or selecting a different institution to see available results.
+                {t('no_programs_description')}
               </p>
               <button 
                 type="button"
                 onClick={handleReset}
                 className="px-10 py-4 bg-[#0B1220] text-white rounded-2xl text-[13px] font-bold hover:bg-[#F97316] hover:-translate-y-0.5 transition-all shadow-lg shadow-[#0B1220]/10"
               >
-                Clear all filters
+                {t('clear_all_filters')}
               </button>
             </div>
           )}
@@ -223,18 +228,18 @@ export default function DashboardPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-20 items-start">
             <div className="lg:col-span-1 sticky top-32">
               <h2 className="text-4xl md:text-5xl font-black text-[#0B1220] tracking-tighter mb-6 leading-none">
-                Ecosystem <br />
-                <span className="bg-gradient-to-r from-[#0B1220] to-[#4F46E5] bg-clip-text text-transparent">Insights</span>
+                {t('ecosystem_title_line1')} <br />
+                <span className="bg-gradient-to-r from-[#0B1220] to-[#4F46E5] bg-clip-text text-transparent">{t('ecosystem_title_line2')}</span>
               </h2>
               <p className="text-base md:text-lg text-[#475569] font-medium leading-relaxed mb-10 opacity-80">
-                Proprietary structural analysis across language, qualification levels, and institutional density.
+                {tInsights('description')}
               </p>
               
               <div className="space-y-4">
                 <div className="p-6 bg-white border border-[#E2E8F0] shadow-sm hover:shadow-md transition-all duration-300">
-                  <p className="text-[10px] font-black text-[#64748B] uppercase tracking-[0.2em] mb-2">Data Integrity</p>
+                  <p className="text-[10px] font-black text-[#64748B] uppercase tracking-[0.2em] mb-2">{tInsights('data_integrity_label')}</p>
                   <p className="text-sm text-[#0B1220] font-bold leading-relaxed">
-                    Charts are generated from real-time normalized data from <span className="text-[#4F46E5]">{universities.length}</span> validated sources.
+                    {tInsights.rich('data_integrity_text', {count: universities.length, span: (chunks) => <span className="text-[#4F46E5]">{chunks}</span>})}
                   </p>
                 </div>
               </div>
@@ -257,7 +262,7 @@ export default function DashboardPage() {
         <aside
           role="dialog"
           aria-modal="true"
-          aria-label="Program details"
+          aria-label={tPanel('dialog_aria')}
           className={`absolute right-0 bottom-0 top-auto md:top-0 h-[92dvh] md:h-full w-full md:w-[80vw] lg:w-[46vw] bg-white border-l border-[#E2E8F0] shadow-[0_24px_64px_rgba(15,23,42,0.14)] rounded-t-xl md:rounded-none transition-all duration-300 ${
             isPanelOpen
               ? 'translate-y-0 md:translate-y-0 md:translate-x-0 opacity-100'
@@ -278,7 +283,7 @@ export default function DashboardPage() {
                 </div>
                 <button
                   type="button"
-                  aria-label="Close details panel"
+                  aria-label={tPanel('close_details')}
                   onClick={() => setSelectedProgram(null)}
                   className="w-10 h-10 rounded-md border border-[#E2E8F0] text-[#64748B] hover:text-[#0B1220] hover:border-[#CBD5E1] transition-colors flex items-center justify-center"
                 >
@@ -288,53 +293,53 @@ export default function DashboardPage() {
 
               <div className="overflow-y-auto px-5 md:px-8 py-6 md:py-8 space-y-8">
                 <section className="space-y-4">
-                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#64748B]">Overview</h3>
+                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#64748B]">{tPanel('overview')}</h3>
                   <p className="text-[15px] md:text-base text-[#334155] leading-relaxed line-clamp-5">
                     {selectedProgram.description}
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div className="rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] p-3.5">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">Location</p>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">{tPanel('location')}</p>
                       <p className="text-sm font-semibold text-[#0B1220] flex items-center gap-2"><MapPin className="w-4 h-4 text-[#6366F1]" />{selectedProgram.city}</p>
                     </div>
                     <div className="rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] p-3.5">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">Duration</p>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">{tPanel('duration')}</p>
                       <p className="text-sm font-semibold text-[#0B1220] flex items-center gap-2"><Clock className="w-4 h-4 text-[#6366F1]" />{selectedProgram.duration}</p>
                     </div>
                     <div className="rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] p-3.5">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">Language</p>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">{tPanel('language')}</p>
                       <p className="text-sm font-semibold text-[#0B1220] flex items-center gap-2"><Languages className="w-4 h-4 text-[#6366F1]" />{selectedProgram.language}</p>
                     </div>
                   </div>
                 </section>
 
                 <section className="space-y-4">
-                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#64748B]">Structured Data</h3>
+                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#64748B]">{tPanel('structured_data')}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="rounded-lg border border-[#E2E8F0] p-4 bg-white">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">Education Level</p>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">{tPanel('education_level')}</p>
                       <p className="text-sm font-semibold text-[#0B1220]">{selectedProgram.educationType}</p>
                     </div>
                     <div className="rounded-lg border border-[#E2E8F0] p-4 bg-white">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">Degree Type</p>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">{tPanel('degree_type')}</p>
                       <p className="text-sm font-semibold text-[#0B1220]">{selectedProgram.level}</p>
                     </div>
                     <div className="rounded-lg border border-[#E2E8F0] p-4 bg-white">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">Language</p>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">{tPanel('language')}</p>
                       <p className="text-sm font-semibold text-[#0B1220]">{selectedProgram.language}</p>
                     </div>
                     <div className="rounded-lg border border-[#E2E8F0] p-4 bg-white">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">Institution Name</p>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#64748B] mb-1">{tPanel('institution_name')}</p>
                       <p className="text-sm font-semibold text-[#0B1220]">{selectedProgram.school}</p>
                     </div>
                   </div>
                 </section>
 
                 <section className="space-y-3">
-                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#64748B]">Data Quality</h3>
+                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#64748B]">{tPanel('data_quality')}</h3>
                   <div className="rounded-lg border border-[#E2E8F0] p-4 bg-[#F8FAFC] flex flex-col gap-2">
-                    <p className="text-sm font-semibold text-[#0B1220] flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#10B981]" />Confidence: High</p>
-                    <p className="text-sm font-semibold text-[#0B1220] flex items-center gap-2"><GraduationCap className="w-4 h-4 text-[#6366F1]" />Source Type: Official Website</p>
+                    <p className="text-sm font-semibold text-[#0B1220] flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#10B981]" />{tPanel('confidence_high')}</p>
+                    <p className="text-sm font-semibold text-[#0B1220] flex items-center gap-2"><GraduationCap className="w-4 h-4 text-[#6366F1]" />{tPanel('source_type')}</p>
                   </div>
                 </section>
 
@@ -345,13 +350,13 @@ export default function DashboardPage() {
                     rel="noreferrer"
                     className="w-full min-h-12 inline-flex items-center justify-center gap-2 rounded-md bg-[#0F172A] text-white text-sm font-bold px-4 py-3 shadow-[0_8px_18px_rgba(15,23,42,0.18)] hover:bg-[#1E293B] transition-colors"
                   >
-                    View Official Source
+                    {tPanel('view_official_source')}
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </section>
 
                 <section className="space-y-4 pb-2">
-                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#64748B]">Related Programs</h3>
+                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#64748B]">{tPanel('related_programs')}</h3>
                   <div className="space-y-3">
                     {relatedPrograms.length > 0 ? relatedPrograms.map((program) => (
                       <button
@@ -364,7 +369,7 @@ export default function DashboardPage() {
                         <p className="text-xs font-semibold text-[#64748B] mt-1">{program.level} • {program.language}</p>
                       </button>
                     )) : (
-                      <p className="text-sm text-[#64748B]">No additional programs from this institution in the current dataset.</p>
+                      <p className="text-sm text-[#64748B]">{tPanel('no_additional_programs')}</p>
                     )}
                   </div>
                 </section>

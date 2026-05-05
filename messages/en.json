@@ -1,0 +1,151 @@
+{
+  "navbar": {
+    "search": "Search programs, institutions, or keywords...",
+    "search_mobile": "Search programs...",
+    "esc": "ESC",
+    "notifications": "Notifications",
+    "toggle_search": "Toggle search",
+    "clear_search": "Clear search"
+  },
+  "hero": {
+    "live": "Live Intelligence",
+    "title_main": "Netherlands Education",
+    "title_sub": "Data Intelligence",
+    "description": "Enterprise-grade program mapping and ecosystem analytics across the Dutch educational landscape."
+  },
+  "data_quality": {
+    "system_live": "System Live",
+    "sync": "Sync",
+    "poc_scope": "POC Scope: {count} Institutions",
+    "poc_info": "System architecture is engineered for full nationwide expansion to 100+ schools.",
+    "close_info": "Close Info",
+    "badge_verified_data": "Verified Data",
+    "badge_structured": "Structured",
+    "badge_multi_source": "Multi-source",
+    "badge_deduplicated": "Deduplicated",
+    "nationwide_scalability": "Nationwide Scalability",
+    "scalability_text": "Currently indexing validated data from multiple institutions. The modular scraping architecture is built to scale across 100+ schools.",
+    "system_status": "System Status",
+    "production_ready": "Production Ready"
+  },
+  "stats": {
+    "institutions": "Institutions",
+    "analyzed": "Analyzed",
+    "sources": "Sources",
+    "confidence": "Confidence",
+    "coverage_title": "Data Coverage & Intelligence",
+    "primary_portals": "Primary Portals",
+    "validated": "Validated"
+  },
+  "insights": {
+    "title": "Ecosystem Insights",
+    "description": "Proprietary structural analysis across language, qualification levels, and institutional density.",
+    "data_integrity_label": "Data Integrity",
+    "data_integrity_text": "Charts are generated from real-time normalized data from {count} validated sources.",
+    "framework": "Institutional Framework",
+    "edu_type": "Education Type",
+    "leveling": "Academic Leveling",
+    "level": "Qualification Level",
+    "mapping": "Ecosystem Mapping",
+    "cluster": "Intelligence Cluster",
+    "language": "Linguistic Diversity",
+    "lang_mix": "Language Mix",
+    "indexed": "Programs Indexed",
+    "units": "Units"
+  },
+  "filters": {
+    "title": "PROGRAM INTELLIGENCE",
+    "subtitle": "Interactive catalog mapping across Dutch academic institutions.",
+    "search": "Search programs...",
+    "results": "Showing {count} programs",
+    "no_results": "No programs found matching your search.",
+    "all": "All",
+    "school": "School",
+    "level": "Level",
+    "type": "Type",
+    "city": "City"
+  },
+  "card": {
+    "view_details": "View Details"
+  },
+  "dashboard": {
+    "core_value": "Core Value",
+    "core_value_text": "Automating manual research with structured institutional intelligence, designed for nationwide scalability.",
+    "data_processing_pipeline": "Data Processing Pipeline",
+    "institution_breakdown": "Institution Breakdown",
+    "program_catalog": "Program Catalog",
+    "program_catalog_subtitle": "Verified academic and vocational offerings",
+    "ecosystem_status": "Ecosystem Status",
+    "showing_programs": "Showing {shown} of {total} programs",
+    "no_programs_title": "No programs match your filters",
+    "no_programs_description": "Try adjusting your dimensions or selecting a different institution to see available results.",
+    "clear_all_filters": "Clear all filters",
+    "ecosystem_title_line1": "Ecosystem",
+    "ecosystem_title_line2": "Insights"
+  },
+  "panel": {
+    "dialog_aria": "Program details",
+    "close_details": "Close details panel",
+    "overview": "Overview",
+    "location": "Location",
+    "duration": "Duration",
+    "language": "Language",
+    "structured_data": "Structured Data",
+    "education_level": "Education Level",
+    "degree_type": "Degree Type",
+    "institution_name": "Institution Name",
+    "data_quality": "Data Quality",
+    "confidence_high": "Confidence: High",
+    "source_type": "Source Type: Official Website",
+    "view_official_source": "View Official Source",
+    "related_programs": "Related Programs",
+    "no_additional_programs": "No additional programs from this institution in the current dataset."
+  },
+  "school_selector": {
+    "all_institutions": "All Institutions"
+  },
+  "pagination": {
+    "previous": "Previous page",
+    "next": "Next page"
+  },
+  "filters_panel": {
+    "title": "Dimension Filters",
+    "subtitle": "Refine academic mapping",
+    "education": "Education",
+    "degree": "Degree",
+    "language": "Language",
+    "reset": "Reset",
+    "option": {
+      "all_types": "All Types",
+      "mbo": "MBO",
+      "hbo": "HBO",
+      "wo": "WO",
+      "all_levels": "All Levels",
+      "bachelor": "Bachelor",
+      "master": "Master",
+      "any_language": "Any Language",
+      "english": "English",
+      "dutch": "Dutch"
+    }
+  },
+  "pipeline": {
+    "scraping": "Scraping",
+    "multi_source": "Multi-source",
+    "normalization": "Normalization",
+    "structured": "Structured",
+    "deduplication": "Deduplication",
+    "clean_id": "Clean ID",
+    "structuring": "Structuring",
+    "valid_type": "Valid Type",
+    "ready_for_api": "Ready for API",
+    "live_data": "Live Data"
+  },
+  "footer": {
+    "tagline": "Education Data Intelligence Platform",
+    "docs": "Docs",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
