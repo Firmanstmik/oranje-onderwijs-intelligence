@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { CheckCircle2, ShieldCheck, Database, Layers, Zap, Clock } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Database, Layers, Zap, Clock, Pointer } from 'lucide-react';
 
 interface DataQualityProps {
   totalSchools: number;
@@ -10,6 +10,7 @@ interface DataQualityProps {
 
 const DataQuality = ({ totalSchools, totalPrograms }: DataQualityProps) => {
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
     const time = new Date().toLocaleTimeString('en-GB', { 
@@ -41,11 +42,26 @@ const DataQuality = ({ totalSchools, totalPrograms }: DataQualityProps) => {
         </div>
         
         <div className="group relative w-full sm:w-auto">
-          <div className="px-4 py-2 bg-[#0B1220] text-white rounded-xl label-premium !text-white cursor-help shadow-premium transition-transform hover:-translate-y-0.5 text-center sm:text-left text-[11px] md:text-[12px]">
+          <button 
+            type="button"
+            onClick={() => setShowTooltip(!showTooltip)}
+            className="w-full sm:w-auto px-5 py-2.5 bg-[#0B1220] text-white rounded-xl label-premium !text-white cursor-pointer shadow-premium transition-all hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 relative"
+          >
             POC Scope: {totalSchools} Institutions
-          </div>
-          <div className="absolute bottom-full right-0 mb-3 w-64 md:w-72 p-4 bg-[#0B1220] text-[#475569] text-[10px] md:text-[11px] font-medium leading-relaxed rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-2xl border border-white/10 hidden sm:block">
-            System architecture is engineered for full nationwide expansion to 100+ schools.
+            <Pointer className="w-4 h-4 text-[#F97316] animate-bounce" />
+          </button>
+          
+          <div className={`absolute bottom-full right-0 mb-3 w-full sm:w-72 p-4 bg-[#0B1220] text-[#94A3B8] text-[11px] font-medium leading-relaxed rounded-2xl transition-all duration-300 z-50 shadow-2xl border border-white/10 ${showTooltip ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:translate-y-0'}`}>
+            <div className="flex items-start gap-3">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#F97316] mt-1.5 flex-shrink-0" />
+              <p>System architecture is engineered for full nationwide expansion to 100+ schools.</p>
+            </div>
+            <button 
+              onClick={(e) => { e.stopPropagation(); setShowTooltip(false); }}
+              className="mt-3 text-[9px] font-black uppercase tracking-widest text-[#F97316] hover:text-white transition-colors sm:hidden"
+            >
+              Close Info
+            </button>
           </div>
         </div>
       </div>

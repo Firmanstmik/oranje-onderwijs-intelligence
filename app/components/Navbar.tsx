@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { Search, User, Bell } from 'lucide-react';
+import { Search, User, Bell, X } from 'lucide-react';
 
 interface NavbarProps {
   searchQuery?: string;
@@ -7,10 +8,13 @@ interface NavbarProps {
 }
 
 const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
+  const [isSearchExpanded, setIsSearchExpanded] = useState(false);
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' || e.key === 'Escape') {
       if (e.key === 'Escape') {
         onSearchChange?.('');
+        setIsSearchExpanded(false);
       }
       // Scroll to catalog section
       const catalog = document.getElementById('program-catalog');
@@ -46,6 +50,7 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
             </div>
           </div>
 
+          {/* Desktop Search */}
           <div className="flex-1 max-w-2xl mx-8 hidden sm:block">
             <div className="relative group">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -74,10 +79,11 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
           <div className="flex items-center gap-3 md:gap-5">
             <button 
               type="button"
-              className="p-2.5 text-[#64748B] hover:text-[#4F46E5] hover:bg-[#F1F5F9] rounded-xl transition-all sm:hidden"
-              aria-label="Search"
+              onClick={() => setIsSearchExpanded(!isSearchExpanded)}
+              className={`p-2.5 transition-all sm:hidden rounded-xl ${isSearchExpanded ? 'bg-[#4F46E5] text-white shadow-lg shadow-[#4F46E5]/20' : 'text-[#64748B] hover:text-[#4F46E5] hover:bg-[#F1F5F9]'}`}
+              aria-label="Toggle Search"
             >
-              <Search className="h-5 w-5" />
+              {isSearchExpanded ? <X className="h-5 w-5" /> : <Search className="h-5 w-5" />}
             </button>
             
             <button 
@@ -93,6 +99,33 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
             <div className="h-9 w-9 md:h-11 md:w-11 rounded-2xl bg-[linear-gradient(135deg,#F8FAFC,#EEF2FF)] border border-[#E2E8F0] flex items-center justify-center overflow-hidden cursor-pointer hover:ring-4 hover:ring-[#4F46E5]/10 hover:border-[#4F46E5]/30 transition-all shadow-sm">
               <User className="w-5 h-5 md:w-6 md:h-6 text-[#64748B]" />
             </div>
+          </div>
+        </div>
+
+        {/* Mobile Search Bar - Expandable */}
+        <div className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${isSearchExpanded ? 'max-h-20 opacity-100 pb-5' : 'max-h-0 opacity-0'}`}>
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+              <Search className="h-4 w-4 text-[#94A3B8]" />
+            </div>
+            <input
+              type="text"
+              autoFocus={isSearchExpanded}
+              value={searchQuery}
+              onChange={(e) => onSearchChange?.(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="block w-full pl-11 pr-12 py-3 border border-[#E2E8F0] rounded-2xl bg-[#F8FAFC] placeholder-[#94A3B8] focus:outline-none focus:ring-4 focus:ring-[#4F46E5]/5 focus:border-[#4F46E5] focus:bg-white transition-all text-sm font-medium shadow-sm"
+              placeholder="Search programs..."
+            />
+            {searchQuery && (
+              <button 
+                type="button"
+                onClick={handleClear}
+                className="absolute inset-y-0 right-0 pr-4 flex items-center text-[#94A3B8]"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
           </div>
         </div>
       </div>
