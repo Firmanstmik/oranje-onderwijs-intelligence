@@ -11,6 +11,7 @@ interface NavbarProps {
 
 const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
+  const [isMobileLangVisible, setIsMobileLangVisible] = useState(true);
   const t = useTranslations('navbar');
   const locale = useLocale();
   const router = useRouter();
@@ -46,10 +47,37 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
     }
   };
 
+  useEffect(() => {
+    let lastY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      // Always show near top for easier first interaction.
+      if (currentY < 24) {
+        setIsMobileLangVisible(true);
+        lastY = currentY;
+        return;
+      }
+
+      if (currentY > lastY + 6) {
+        setIsMobileLangVisible(false);
+      } else if (currentY < lastY - 6) {
+        setIsMobileLangVisible(true);
+      }
+
+      lastY = currentY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-[60] w-full bg-white/70 backdrop-blur-xl border-b border-[#E2E8F0]/80 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04)]">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex justify-between items-center h-20 md:h-32">
+    <>
+      <nav className="sticky top-0 z-[60] w-full bg-white/70 backdrop-blur-xl border-b border-[#E2E8F0]/80 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.04)]">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="flex justify-between items-center h-20 md:h-32">
           <div className="flex items-center">
             <div className="relative w-56 h-14 md:w-[380px] md:h-22 transition-transform hover:scale-[1.02] duration-500">
               <Image 
@@ -88,7 +116,7 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 md:gap-5">
+            <div className="flex items-center gap-3 md:gap-5">
             <button 
               type="button"
               onClick={() => setIsSearchExpanded(!isSearchExpanded)}
@@ -98,8 +126,8 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
               {isSearchExpanded ? <X className="h-5 w-5" /> : <Search className="h-5 w-5" />}
             </button>
             
-            {/* Language Switcher */}
-            <div className="flex items-center bg-[linear-gradient(135deg,#FFFFFF,#F8FAFC)] border border-[#E2E8F0] rounded-xl md:rounded-2xl p-0.5 md:p-1 shadow-[0_8px_18px_rgba(15,23,42,0.08)] h-9 md:h-12">
+              {/* Language Switcher (desktop/tablet) */}
+              <div className="hidden sm:flex items-center bg-[linear-gradient(135deg,#FFFFFF,#F8FAFC)] border border-[#E2E8F0] rounded-xl md:rounded-2xl p-0.5 md:p-1 shadow-[0_8px_18px_rgba(15,23,42,0.08)] h-9 md:h-12">
               <button
                 type="button"
                 onClick={() => handleLanguageChange('en')}
@@ -136,40 +164,87 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
                 </span>
                 NL
               </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Search Bar - Expandable */}
+          <div className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${isSearchExpanded ? 'max-h-20 opacity-100 pb-5' : 'max-h-0 opacity-0'}`}>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <Search className="h-4 w-4 text-[#94A3B8]" />
+              </div>
+              <input
+                type="text"
+                autoFocus={isSearchExpanded}
+                value={searchQuery}
+                onChange={(e) => onSearchChange?.(e.target.value)}
+                onKeyDown={handleKeyDown}
+                className="block w-full pl-11 pr-12 py-3 border border-[#E2E8F0] rounded-2xl bg-[#F8FAFC] placeholder-[#94A3B8] focus:outline-none focus:ring-4 focus:ring-[#4F46E5]/5 focus:border-[#4F46E5] focus:bg-white transition-all text-sm font-medium shadow-sm"
+                placeholder={t('search_mobile')}
+              />
+              {searchQuery && (
+                <button 
+                  type="button"
+                  onClick={handleClear}
+                  aria-label={t('clear_search')}
+                  title={t('clear_search')}
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-[#94A3B8]"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
             </div>
           </div>
         </div>
+      </nav>
 
-        {/* Mobile Search Bar - Expandable */}
-        <div className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${isSearchExpanded ? 'max-h-20 opacity-100 pb-5' : 'max-h-0 opacity-0'}`}>
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <Search className="h-4 w-4 text-[#94A3B8]" />
-            </div>
-            <input
-              type="text"
-              autoFocus={isSearchExpanded}
-              value={searchQuery}
-              onChange={(e) => onSearchChange?.(e.target.value)}
-              onKeyDown={handleKeyDown}
-              className="block w-full pl-11 pr-12 py-3 border border-[#E2E8F0] rounded-2xl bg-[#F8FAFC] placeholder-[#94A3B8] focus:outline-none focus:ring-4 focus:ring-[#4F46E5]/5 focus:border-[#4F46E5] focus:bg-white transition-all text-sm font-medium shadow-sm"
-              placeholder={t('search_mobile')}
-            />
-            {searchQuery && (
-              <button 
-                type="button"
-                onClick={handleClear}
-                aria-label={t('clear_search')}
-                title={t('clear_search')}
-                className="absolute inset-y-0 right-0 pr-4 flex items-center text-[#94A3B8]"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            )}
-          </div>
+      {/* Language Switcher (mobile, below navbar) */}
+      <div
+        className={`sm:hidden fixed top-[84px] right-3 z-[58] transition-all duration-300 ${
+          isMobileLangVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+        }`}
+      >
+        <div className="flex items-center bg-[linear-gradient(135deg,#FFFFFF,#F8FAFC)] border border-[#E2E8F0] rounded-xl p-0.5 shadow-[0_8px_18px_rgba(15,23,42,0.12)] h-8">
+          <button
+            type="button"
+            onClick={() => handleLanguageChange('en')}
+            className={`relative overflow-hidden px-2 py-0.5 text-[9px] font-black tracking-[0.16em] transition-all rounded-lg inline-flex items-center gap-1 ${
+              locale === 'en'
+                ? 'text-white bg-[linear-gradient(135deg,#1E3A8A,#1D4ED8)] shadow-[0_6px_12px_rgba(29,78,216,0.3)]'
+                : 'text-[#64748B] hover:text-[#0F172A] hover:bg-white'
+            }`}
+            aria-label="Switch language to English"
+          >
+            <span className="relative w-2.5 h-2.5 rounded-[2px] overflow-hidden bg-[#012169] border border-white/40">
+              <span className="absolute left-1/2 top-0 h-full w-[22%] -translate-x-1/2 bg-white" />
+              <span className="absolute left-0 top-1/2 w-full h-[22%] -translate-y-1/2 bg-white" />
+              <span className="absolute left-1/2 top-0 h-full w-[12%] -translate-x-1/2 bg-[#C8102E]" />
+              <span className="absolute left-0 top-1/2 w-full h-[12%] -translate-y-1/2 bg-[#C8102E]" />
+            </span>
+            EN
+          </button>
+          <div className="w-px h-2 bg-[#E2E8F0] mx-0.5" />
+          <button
+            type="button"
+            onClick={() => handleLanguageChange('nl')}
+            className={`relative overflow-hidden px-2 py-0.5 text-[9px] font-black tracking-[0.16em] transition-all rounded-lg inline-flex items-center gap-1 ${
+              locale === 'nl'
+                ? 'text-[#0B1220] bg-[linear-gradient(to_bottom,#AE1C28_0%,#AE1C28_33.33%,#FFFFFF_33.33%,#FFFFFF_66.66%,#21468B_66.66%,#21468B_100%)] shadow-[0_6px_12px_rgba(33,70,139,0.3)]'
+                : 'text-[#64748B] hover:text-[#0F172A] hover:bg-white'
+            }`}
+            aria-label="Schakel taal naar Nederlands"
+          >
+            <span className="inline-flex flex-col w-2.5 h-2.5 rounded-[2px] overflow-hidden border border-white/40">
+              <span className="h-1/3 bg-[#AE1C28]" />
+              <span className="h-1/3 bg-white" />
+              <span className="h-1/3 bg-[#21468B]" />
+            </span>
+            NL
+          </button>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 
