@@ -121,6 +121,8 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
               <button 
                 type="button"
                 onClick={handleClear}
+                aria-label="Clear search"
+                title="Clear search"
                 className="absolute inset-y-0 right-0 pr-4 flex items-center text-[#94A3B8]"
               >
                 <X className="h-4 w-4" />
