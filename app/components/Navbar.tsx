@@ -20,7 +20,7 @@ const Navbar = ({ searchQuery = '', onSearchChange }: NavbarProps) => {
   const handleLanguageChange = (newLocale: string) => {
     const segments = pathname.split('/');
     segments[1] = newLocale;
-    router.push(segments.join('/'));
+    router.push(segments.join('/'), { scroll: false });
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
