@@ -9,16 +9,18 @@ interface DataQualityProps {
 }
 
 const DataQuality = ({ totalSchools, totalPrograms }: DataQualityProps) => {
-  const [mounted, setMounted] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState('');
+  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
 
   useEffect(() => {
-    setMounted(true);
-    setLastUpdated(new Date().toLocaleTimeString('en-GB', { 
+    const time = new Date().toLocaleTimeString('en-GB', { 
       hour: '2-digit', 
       minute: '2-digit',
       hour12: false 
-    }));
+    });
+    // Use requestAnimationFrame to avoid synchronous setState in effect warning
+    requestAnimationFrame(() => {
+      setLastUpdated(time);
+    });
   }, []);
 
   return (
@@ -33,7 +35,7 @@ const DataQuality = ({ totalSchools, totalPrograms }: DataQualityProps) => {
           <div className="flex items-center gap-2 text-[#475569]">
             <Clock className="w-3.5 h-3.5" />
             <span className="text-[12px] md:text-[13px] font-semibold tracking-tight">
-              Sync: {mounted ? lastUpdated : '--:--'}
+              Sync: {lastUpdated || '--:--'}
             </span>
           </div>
         </div>

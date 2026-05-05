@@ -18,15 +18,13 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
-  AreaChart,
-  Area
+  TooltipProps
 } from 'recharts';
 
 const COLORS = ['#4F46E5', '#6366F1', '#7C3AED', '#F97316', '#10B981'];
 const COLOR_CLASSES = ['bg-[#4F46E5]', 'bg-[#6366F1]', 'bg-[#7C3AED]', 'bg-[#F97316]', 'bg-[#10B981]'];
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-[#0B1220] border border-white/10 backdrop-blur-xl p-4 rounded-2xl shadow-2xl animate-in fade-in zoom-in duration-300">
