@@ -1,0 +1,532 @@
+{
+  "scraped_at": "2026-05-03T21:37:04.433575+00:00",
+  "country": "Netherlands",
+  "school": {
+    "name": "TU Delft",
+    "type": "WO (Research University)",
+    "website": "https://www.tudelft.nl"
+  },
+  "programs": [
+    {
+      "name": "Aerospace Engineering",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "English",
+      "description": "How do you design an aircraft that can fly on hydrogen? How do you get a wind turbine to work on a floating platform at sea? Is there an easy solution for space debris? When you choose the bachelor\u2019s programme Aerospace Engineering, you will be prepared to shape the future of sustainable aerospace.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/ae/bsc-aerospace-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Applied Mathematics",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Accelerating wound healing, reducing traffic congestion, and gaining insight into financial crises: mathematical models play a crucial role in understanding physical, technical, and societal phenomena. The study of Applied Mathematics equips you with the skills to critically analyze problems rather ",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/tw/bachelor-of-applied-mathematics",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Applied Physics",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Applied Physics programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/technische-natuurkunde/bachelor-of-applied-physics",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Architecture, Urbanism And Building Sciences",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Architecture, Urbanism and Building Sciences programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/bk/bachelor-of-architecture-urbanism-and-building-sciences",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Civil Engineering",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Civil Engineering programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/civiele-techniek/bsc-civil-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Clinical Technology",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Clinical Technology programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/klinische-technologie/bachelor-of-clinical-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Computer Science And Engineering",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Self-driving cars, smartphone navigation, personalised offers based on your surfing behaviour and robots used in healthcare. During the Computer Science and Engineering degree programme you will learn how to develop software process data for the intelligent systems of today and the future. Computer ",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/computer-science-and-engineering/bachelor-of-computer-science-and-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Earth, Climate And Technology",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Are you looking for a degree that combines knowledge of the Earth with engineering? Do you want to develop solutions for challenges related to climate change, the energy transition, and the availability of scarce resources?",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/ect/bsc-earth-climate-and-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Electrical Engineering",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "English",
+      "description": "A solar panel, a robot or an implant to help one hear again: without Electrical Engineering these things could not have been designed. This field is continuously working on or towards new developments. Electrical engineers are, in fact, the driving force behind the development of smartphones, electr",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/electrical-engineering/bsc-electrical-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Industrial Design Engineering",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Industrial Design Engineering programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/industrieel-ontwerpen/bsc-industrial-design-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Life Science And Technology",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Life Science and Technology programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/lst/bsc-life-science-and-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Marine Technology",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Marine Technology programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/maritieme-techniek/bsc-marine-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Mechanical Engineering",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Mechanical Engineering programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/werktuigbouwkunde/bsc-mechanical-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Molecular Science And Technology",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Molecular Science and Technology programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/onderwijs/opleidingen/bachelors/mst/bsc-molecular-science-and-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Nanobiology",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Are you curious to see what happens at the smallest scale of biology? Do you love mathematics, physics and biology but can\u2019t figure out which is your favourite? Then Nanobiology might be something for you! Nanobiology is the study of the complexity of living systems at the smallest scale, a joint pr",
+      "url": "https://www.tudelft.nl/en/education/programmes/bachelors/nb/bsc-nanobiology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Systems Engineering, Policy Analysis And Management",
+      "level": "Bachelor",
+      "education_type": "WO",
+      "language": "Dutch",
+      "description": "The Systems Engineering, Policy analysis and Management programme is taught in Dutch. Therefore, the information about this programme is only available in Dutch. You can find the information about this programme on the Dutch side of this website.",
+      "url": "https://www.tudelft.nl/en/education/programmes/bachelors/technische-bestuurskunde/bsc-systems-engineering-policy-analysis-and-management",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Aerospace Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "TU Delft is home to one of the leading academic programmes in aerospace technology in all of Europe. The Faculty of Aerospace Engineering draws upon a long history of technical excellence, innovation and teaching performance, preparing graduates to contribute to this dynamic sector with technically ",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/ae/msc-aerospace-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Applied Geophysics",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "To meet the growing demands of the world\u2019s expanding population for natural resources, escalating need for space for living, storage, transportation and other facilities, to resolve problems created by our use/misuse of land and the subsurface, to respond to the effects of climate change and dramati",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/agp/msc-applied-geophysics",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Applied Mathematics",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The objective of the MSc programme in Applied Mathematics is to provide its students with a thorough knowledge of applicable mathematics and to develop their expertise in applying the methods and tools of mathematics to problems in science and engineering. This MSc programme in Applied Mathematics i",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/am/msc-applied-mathematics",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Applied Physics",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Applied Physics covers phenomena ranging from the infinitesimally small \u2013 subatomic particles \u2013 to the unimaginably large \u2013 the universe. Somewhere between these two, there is the reality of everyday life. Applied physics is about translating a deep understanding of the theoretical underpinnings of ",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/ap/msc-applied-physics",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Architecture, Urbanism And Building Sciences",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The Master's Programme Architecture, Urbanism and Building Sciences programme at TU Delft is underpinned by the renowned Dutch experience in architecture, spatial planning and the built environment professions and has an international orientation drawing on the multinational faculty of staff and stu",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/aubs/msc-architecture-urbanism-and-building-sciences",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Biomedical Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "As medical science has advanced, physicians and patients have relied on increasingly sophisticated medical devices for diagnosis, treatment, and long-term health care. BioMedical engineers are key players in the development, design, and continuing refinement of devices such as joint replacement pros",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/bme/msc-biomedical-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Chemical Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The Master of Science programme in Chemical Engineering at Delft University of Technology (TU Delft) provides students with the knowledge, insights and skills they need to become independent and responsible researchers or engineers in this field.",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/cheme/msc-chemical-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Civil Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Civil engineering is all around you. Roads, waterways, bridges and flood defenses are just a few everyday examples. Civil engineers have the knowledge to find sustainable solutions for actual problems such as climate change, sea-level rise, resource depletion, population growth and urbanisation, and",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/cie/msc-civil-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Complex Systems Engineering And Management",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Are you looking for a Master's degree programme in which you learn to design in complex technical environments? But do you want more than \u2018just\u2019 technical skills? For example, do you want to look beyond the design of electric vehicles and concentrate on what is needed to implement electric transport",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/cosem/msc-complex-systems-engineering-and-management",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Computer & Embedded Systems Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Innovations made possible by electronic systems and devices are making our lives healthier, more interesting, safer and more sustainable. These innovations are at the heart of industrial innovation and competitiveness, creating and sustaining jobs and economic well-being. The development of these sy",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/cese/msc-computer-embedded-systems-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Computer Science",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Computer Science drives innovation across every aspect of the digital world, from intelligent systems and software solutions to secure networks and data-driven applications. Graduates can pursue careers in software development, AI and data science, cybersecurity, research, and beyond, contributing t",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/cs/msc-computer-science",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Construction Management And Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The master program Construction Management and Engineering (CME) addresses the growing need for reform in the construction industry. The program offers a broad spectrum of courses to prepare the student for the dynamic environment of the construction business by focusing on management aspects of lar",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/cme/msc-construction-management-and-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Data Science And Artificial Intelligence Technology",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Development of entire AI systems, and data-driven and other AI algorithms lie at the heart of real-world applications. They range from intelligent personal assistants to self-driving cars and from smart infrastructures and cities to smart industries and contribute to finding sustainable solutions. C",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/dsait/msc-data-science-and-artificial-intelligence-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Design For Interaction",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "What product or service can we design to help children feel less isolated during medical treatments? How can designers promote more sustainable eating habits? How could a design approach help governments increase democratic participation? And with what concepts or metaphors can we help people imagin",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/dfi/msc-design-for-interaction",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Earth, Climate And Technology",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The world population is growing and so is our need for clean forms of energy, such as geothermal heat, and critical raw materials for solar panels, electronic devices, and windmills. We need to understand how climate change and other processes impacts our environment, the earth & climate system, and",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/ect/msc-earth-climate-and-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Electrical Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Electrical Engineering integrates theory and practice in electricity, electronics, and electromagnetism to develop systems that power, connect, and transform society. At TU Delft, the MSc programme in Electrical Engineering equips you with both fundamental knowledge and practical skills to become a ",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/ee/msc-electrical-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Engineering And Policy Analysis",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "How do you model climate change or a pandemic? What about using a data-driven approach to migration flows? Engineering and Policy Analysis offers students from around the world the opportunity to bring their engineering mindset to policymaking to address today\u2019s most pressing global challenges.",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/epa/msc-engineering-and-policy-analysis",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Environmental Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "How can we ensure clean water, manage waste sustainably, and tackle pollution in urban and rural environments? How can we design systems that protect against floods, droughts, and heatwaves while supporting resource recovery and circular solutions? How can we balance urbanisation, climate resilience",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/env/msc-environmental-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Geomatics",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Increasing environmental and societal challenges as well as rapid digital advancement call for innovative ways to interact with, design and model our built surroundings. In Geomatics for the Built Environment we use geographic data to find solutions for current and emerging challenges. Some of the q",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/gm/msc-geomatics",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Industrial Ecology",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Are you eager to contribute to solutions for the many environmental challenges that the world is facing today? Then the two-year joint-degree MSc Industrial Ecology (IE) is a good fit. IE is considered to be the toolbox for sustainable development. This programme uniquely combines the strengths of t",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/ie/msc-industrial-ecology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Integrated Product Design",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "How can we design products and services that benefit individuals, organisations, and the planet? How can designers transform products into dynamic entities with lifelike qualities, such as products that grow, react, and evolve? How does the integration of Artificial Intelligence empower products to ",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/ipd/msc-integrated-product-design",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Life Science And Technology",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The cell is the building block of life - the smallest unit with the characteristics of living systems. In the MSc Life Science and Technology, you explore fundamental and applied knowledge from Biology, Chemistry, Physics, Technology, Informatics, Pharmacology, and Mathematics to unlock the secrets ",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/lst/msc-life-science-and-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Management Of Technology",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "In the Management of Technology (MOT) programme you learn to explore and understand technology as a corporate resource - a resource that allows a firm to keep many different balls in the air. It shows how firms can use technology to design and develop products and services that maximise customer sat",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/mot/mot",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Marine Technology",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The oceans offer unique potential and challenges for engineers. Consider that around 80% of goods are transported by sea, around 40% of the world\u2019s population lives within 100 km of a coastline, and that the global offshore wind energy sector has expanded 30% in the past 8 years alone. How do we des",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/mt/msc-marine-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Materials Science & Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Welcome to the world of Materials Science and Engineering at TU Delft, where innovation, exploration, and impactful solutions converge. Our comprehensive master's program explores the intricate relationship between material structures and behaviour, encompassing the design of structures to meet spec",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/mse/msc-materials-science-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Mechanical Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Whether it's a dentist's drill or a tunnel drill, an automobile assembly line or a CD player, somewhere in the course of its development, a mechanical engineer has had a hand in its design. Mechanical engineers design, develop and build an enormous range of technical systems and mechanisms for indus",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/me/msc-mechanical-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Metropolitan Analysis, Design And Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Metropolitan regions are under increasing pressure to adapt to climate change, protect environmental quality, and safe-guard the wellbeing of their citizens. The Master's in Metropolitan Analysis, Design, and Engineering (MSc MADE) equips you with the tools and knowledge to address sustainability ch",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/made/msc-metropolitan-analysis-design-and-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Nanobiology",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The successful application of Nanobiology will require not simply collaboration between disciplines, but true disciplinary integration of physics and biology. Are you intrigued by the physical forces at work inside cells? Does the nanoscale complexity of health and disease captivate you? Do you want",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/nb/msc-nanobiology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Offshore & Dredging Engineering",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "More than two-thirds of the earth\u2019s surface is covered by water. The potential of the ocean is enormous:",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/ode/msc-offshore-dredging-engineering",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Robotics",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The MSc Robotics is situated at the intersection of mechanical engineering and artificial intelligence. Engineers who graduate in this domain will be able to guide the industry in strengthening and accelerating robotisation.",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/robotics/msc-robotics",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Strategic Product Design",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "How can entrepreneurs, health professionals and governments work together to design interventions that promote healthy lifestyles? What does a future look like in which technologies like AI and robotics are applied to create a more sustainable food system, and how can we communicate such future visi",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/spd/msc-strategic-product-design",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Sustainable Energy Technology",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "Current energy systems are primarily based on fossil fuels. The energy transition aims to significantly reduce or even completely stop the use of fossil fuels by implementing a sustainable energy system. This transition requires fundamental changes and innovations affecting the world\u2019s energy landsc",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/set/msc-sustainable-energy-technology",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Systems & Control",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "As the complexity and importance of our many industrial structures and manufacturing systems grow, so does the guiding hand of Systems and Control. This active research area is an important discipline in many fields, involving such specialists as engineers, physicists, mathematicians and designers.",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/sc/msc-systems-control",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Technical Medicine",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The Delft University of Technology offers a unique interdisciplinary joint-degree Master programme in technical medicine together with Leiden University, Erasmus University Rotterdam and their academic medical centers.",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/tm/msc-technical-medicine",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Transport, Infrastructure And Logistics",
+      "level": "Master",
+      "education_type": "WO",
+      "language": "English",
+      "description": "The MSc programme in Transport, Infrastructure and Logistics (TIL) is a two-year comprehensive programme that provides graduates with a comprehensive view of the field of transport, infrastructure and logistics.",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/til/msc-transport-infrastructure-and-logistics",
+      "source": "official",
+      "confidence": "high"
+    }
+  ],
+  "meta": {
+    "total_programs": 51,
+    "categories": [
+      "Bachelor",
+      "Master",
+      "Minor"
+    ],
+    "source": "Official university website",
+    "quality": "Premium clean dataset",
+    "ready_for_client": true
+  }
+}

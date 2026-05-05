@@ -1,0 +1,204 @@
+{
+  "scraped_at": "2026-05-03T22:34:29.644874+00:00",
+  "country": "Netherlands",
+  "school": {
+    "name": "Hanze University of Applied Sciences",
+    "type": "HBO (University of Applied Sciences)",
+    "website": "https://www.hanze.nl"
+  },
+  "programs": [
+    {
+      "name": "Classical Music",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "When you choose the Classical Music study programme, you choose a life with your instrument or your voice. A passion that you have been working on for years. If you are driven, want to reach the highest level musically and make music your profession, then studying Classical Music at the Prins Claus",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/classical-music",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Composition & Music Production",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "Dutch",
+      "description": "As a student of Composition & Music Production you will study to become a composer, songwriter or producer, or a combination of those. Note that this programme is Dutch taught.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/composition-and-music-production",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Creative Media & Game Technologies",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Study Game Design at Creative Media & Game Technologies. Hanze UAS offers an international bachelor programme. Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/creative-media-and-game-technologies",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Design",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Develop your design practice (product, spatial, graphic, illustration, animation, interdisciplinary) in an international setting at Minerva (Hanze UAS), Groningen (NL). Project-led learning, research, and collaboration with clients and labs.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/design",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Energy & Power Electronics",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Study Energy & Power Electronics at Hanze UAS and design smart, sustainable solutions for the energy and technology of tomorrow.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/energy-and-power-electronics",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Fine Art",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Build a distinctive art practice at Minerva (Hanze UAS), Groningen (NL). Studio-based, research-led BA with mentoring and exhibitions in an international community.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/fine-art",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "International Business",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Study International Business at Hanze UAS. Interested in global business and intercultural communication? Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/international-business-4-year",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "International Business (3-year)",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Study International Business at Hanze UAS. Want to know how to do business in an international setting? Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/international-business-3-year",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "International Communication",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "International Communication at Hanze UAS: develop PR, marketing, media and consultancy skills for a global communication career. Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/international-communication",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "International Facility Management",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Would you like to make sure that staff members, guests and other people feel welcome in your organisation? Do you want to create a healthy working environment? Do you wish to contribute to a better environment by purchasing sustainable materials for your organisation? If so, International Facility",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/international-facility-management",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "International Finance & Control",
+      "level": "Bachelor",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Study Finance and Control at Hanze UAS and become a business analyst or financial- or business controller. Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/bachelor/international-finance-and-control",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Architecture",
+      "level": "Master",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Do you aspire to be an architect? An architect who adds value to people's environment with their smart and beautiful designs that leave a lasting legacy. Our master trains architects to be ethically aware and conscious of the impact they have. Our students work with real people to resolve real",
+      "url": "https://www.hanze.nl/en/programmes/part-time/master/architecture",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Data Science for Life Sciences",
+      "level": "Master",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Choose the master Data Science for Life Sciences at Hanze UAS if you are good at handling lots of data and would like to learn to apply programming techniques to bridge the gap between computer science and life sciences. Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/master/data-science-for-life-sciences",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Energy for Society",
+      "level": "Master",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Pursue the master Energy for Society at Hanze UAS if you want to help communities to make the transition from fossil fuels to renewables and want to learn how to get people on board. Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/master/energy-for-society",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Interdisciplinary Business Professional",
+      "level": "Master",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Pursue an Interdisciplinary Business Professional Master and build the skills necessary to solve complex organisational problems. Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/master/interdisciplinary-business-professional",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "International Business and Management",
+      "level": "Master",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Pursue a master’s in International Business and Management at Hanze UAS. Build the skills you need for a successful career in management. Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/master/international-business-and-management",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "International Communication",
+      "level": "Master",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "Pursue a master’s in International Communication at Hanze UAS. Gain hands-on experience, global insight, and the skills to lead in today’s communication field. Learn more.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/master/international-communication",
+      "source": "official",
+      "confidence": "high"
+    },
+    {
+      "name": "Interrelational Art Practices (iRAP)",
+      "level": "Master",
+      "education_type": "HBO",
+      "language": "English",
+      "description": "MA Fine Art & Design (iRAP) at the Frank Mohr Institute, Hanze UAS in Groningen (NL): socially engaged, interrelational art with fieldwork, collaboration and research.",
+      "url": "https://www.hanze.nl/en/programmes/full-time/master/fine-art-and-design-interrelational-art-practices",
+      "source": "official",
+      "confidence": "high"
+    }
+  ],
+  "meta": {
+    "total_programs": 18,
+    "source": "Official university website",
+    "quality": "Premium clean dataset",
+    "features": [
+      "Auto language detection",
+      "Retry mechanism",
+      "Fallback scraping",
+      "Anti-bot delay",
+      "Clean structured data"
+    ],
+    "ready_for_client": true
+  }
+}

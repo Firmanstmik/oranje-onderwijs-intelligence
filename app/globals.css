@@ -1,0 +1,124 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0B1220;
+  --primary-text: #0B1220;
+  --secondary-text: #475569;
+  --indigo-primary: #4F46E5;
+  --indigo-gradient-start: #4F46E5;
+  --indigo-gradient-via: #6366F1;
+  --indigo-gradient-end: #7C3AED;
+  --dutch-accent: #F97316;
+  --border: #E2E8F0;
+  --card-bg: #FFFFFF;
+  --success: #10B981;
+  --radial-glow: radial-gradient(circle at 70% 40%, rgba(79, 70, 229, 0.08), transparent 60%);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Satoshi', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--primary-text);
+}
+
+* {
+  border-color: var(--border);
+}
+
+/* Premium Card System */
+.premium-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom transitions for premium feel */
+.transition-premium {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float-slow {
+  animation: float-slow 10s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Glass effect */
+.glass {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Premium Labels */
+.label-premium {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary-text);
+}
+
+@media (max-width: 768px) {
+  .label-premium {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.bg-radial-glow {
+  background: var(--radial-glow);
+}
+
+/* Scrollbar Utility */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+@supports (scrollbar-width: none) {
+  .hide-scrollbar {
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Remove Next.js Dev Indicator */
+#nextjs-portal, 
+[data-nextjs-toast], 
+[data-nextjs-dialog],
+[data-nextjs-dev-indicator] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
